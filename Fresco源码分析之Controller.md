@@ -1,10 +1,6 @@
+# Fresco源码分析之Controller
 ---
-title: Fresco源码分析之Controller
-date: 2017-12-14 08:32:26
-tags: 源码分析
-category: android
----
-如果你是第一次看我的**Fresco**的源码分析系列文章，这里强烈推荐你先阅读我的前面两篇文章[Fresco源码分析之DraweeView](https://idisfkj.github.io/2017/11/28/Fresco%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90%E4%B9%8BDraweeView/)与[Fresco源码分析之Hierarchy](https://idisfkj.github.io/2017/12/07/Fresco%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90%E4%B9%8BHierarchy/)。好了，下面进入正题。在上篇文章中我们提到，在**Fresco**中关于图片的缓存、请求与显示逻辑处理都在**Controller**中。那么**Controller**到底是如何贯穿这些功能的呢？我们先从它的出生开始。
+如果你是第一次看我的**Fresco**的源码分析系列文章，这里强烈推荐你先阅读我的前面两篇文章[Fresco源码分析之DraweeView](https://github.com/idisfkj/Fresco-Source-Analysis/blob/master/Fresco%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90%E4%B9%8BDraweeView.md)与[Fresco源码分析之Hierarchy](https://github.com/idisfkj/Fresco-Source-Analysis/blob/master/Fresco%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90%E4%B9%8BHierarchy.md)。好了，下面进入正题。在上篇文章中我们提到，在**Fresco**中关于图片的缓存、请求与显示逻辑处理都在**Controller**中。那么**Controller**到底是如何贯穿这些功能的呢？我们先从它的出生开始。
 
 # Suppiler
 **PipelineDraweeControllerBuilderSupplier**是一个供应商，主要实现了`Supplier<T>`接口，它只有一个方法*T get()*，用来获取相关的提供实现。因此该供应类提供的就是**PipelineDraweeControllerBuilder**实例。

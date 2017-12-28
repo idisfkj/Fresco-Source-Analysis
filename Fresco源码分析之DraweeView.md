@@ -1,8 +1,4 @@
----
-title: Fresco源码分析之DraweeView
-date: 2017-11-28 21:28:05
-tags: 源码分析
-category: android
+# Fresco源码分析之DraweeView
 ---
 
 在`Android`中图片加载的框架很多，例如：`Fresco`、`Picasso`、`Glide`与`Imageloader`。它们都有各自的优点，但总的来说，使用起来方便简单、可配置性高与提供良好的缓存机制。由于平常主要用的还是`Fresco`，所以这里有必要对`Fresco`的原理进行深入研究。这样对于以后的使用与理解将会得到巨大的帮助。
