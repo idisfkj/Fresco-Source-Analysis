@@ -182,7 +182,8 @@
           mId,
           mIsRequestSubmitted ? "request already submitted" : "request needs submit");
     }
-//事件记录器   mEventTracker.recordEvent(Event.ON_ATTACH_CONTROLLER);
+	//事件记录器   
+	mEventTracker.recordEvent(Event.ON_ATTACH_CONTROLLER);
      Preconditions.checkNotNull(mSettableDraweeHierarchy);
     //取消资源推迟释放机制，防止资源被释放
     mDeferredReleaser.cancelDeferredRelease(this);
