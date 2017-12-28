@@ -1,6 +1,6 @@
 # Fresco源码分析之Hierarchy
 ---
-上篇文章我们分析了**Fresco**中的**DraweeView**，对其中的一些原理以及方法进行了解析。在这过程中我们了解到，**DraweeView**中是通过**DraweeHolder**来统一管理的。而**DraweeHolder**又是用来统一管理相关的**Hierarchy**与**Controller**，如果想了解**DraweeView**相关的知识，可以先看下我的前一篇文章[Fresco源码分析之DraweeView] (https://github.com/idisfkj/Fresco-Source-Analysis/blob/master/Fresco%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90%E4%B9%8BDraweeView.md)。今天这里进一步来分析**Fresco**中的**Hierarchy**。
+上篇文章我们分析了**Fresco**中的**DraweeView**，对其中的一些原理以及方法进行了解析。在这过程中我们了解到，**DraweeView**中是通过**DraweeHolder**来统一管理的。而**DraweeHolder**又是用来统一管理相关的**Hierarchy**与**Controller**，如果想了解**DraweeView**相关的知识，可以先看下我的前一篇文章[Fresco源码分析之DraweeView](https://github.com/idisfkj/Fresco-Source-Analysis/blob/master/Fresco%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90%E4%B9%8BDraweeView.md)。今天这里进一步来分析**Fresco**中的**Hierarchy**。
 
 # GenericDraweeHierarchyBuilder
 在**GenericDraweeView**的构造方法中会调用*inflateHierarchy(context, atts)*方法来创建一个**GenericDraweeHierarchyBuilder**对象，通过调用该对象的**build**方法来生成一个**Hierarchy**。
